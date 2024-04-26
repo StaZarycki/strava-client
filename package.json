@@ -1,0 +1,58 @@
+{
+  "name": "strava-client",
+  "version": "1.0.0",
+  "description": "Unofficial Strava client.",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "scripts": {
+    "build": "pnpm clean && pnpm build:cjs && pnpm build:esm",
+    "build:esm": "rollup --config ./configs/rollup.config.mjs",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "build:types": "tsc -p ./configs/tsconfig.types.json",
+    "clean": "rm -rf lib/*"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./index.d.ts",
+  "files": [
+    "/lib",
+    "/index.d.ts"
+  ],
+  "keywords": [
+    "strava",
+    "api",
+    "typescript"
+  ],
+  "author": "Stanisław Zarycki <stazarycki@gmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "support": {
+    "backing": {
+      "npm-funding": true
+    }
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.1.1",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "acorn": "^8.11.3",
+    "eslint": "^8.57.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "globals": "^15.0.0",
+    "rollup": "^4.16.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.1"
+  }
+}
