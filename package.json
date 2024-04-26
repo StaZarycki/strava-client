@@ -1,6 +1,6 @@
 {
   "name": "strava-client",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Unofficial Strava client.",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
@@ -30,6 +30,10 @@
     "typescript"
   ],
   "author": "Stanisław Zarycki <stazarycki@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StaZarycki/strava-client.git"
+  },
   "license": "MIT",
   "sideEffects": false,
   "support": {
